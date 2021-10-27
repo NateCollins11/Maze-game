@@ -9,14 +9,43 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
-  <body onkeydown='getKeyAndMove(event)'>
-    <canvas id="board">
-
-
-
-    </canvas>
+  <body onkeydown='getKeyAndMove(event)' style='background-color: darkgray'>
+    <div id='layout' style="display: flex">
+      <div>
+    <br>
+    <div id='info_box'>
+    <select id='grid_size'>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option selected value='5'>5</option>
+      <option value='6'>6</option>
+      <option value='7'>7</option>
+      <option value='8'>8</option>
+      <option value='9'>9</option>
+      <option value='10'>10</option>
+      <option value='rand_size'>random</option>
+    </select>
+    <span id='game_text_box'>Select difficulty and begin!</span>
+    <input type='button' value='Start Game' onclick="setUp()">
     
-    
+    </div>
+    <div style="text-align: center">
+      <br>
+      <br>
+      <br>
+    <canvas id="board" width="500px" height="500px"></canvas>
+    </div>
+  </div>
+  <div id='controls'>
+    <div>Arrow Keys ---- move</div>
+    <br>
+    <br>
+    <div>r Key ---- restart path</div>
+    <br>
+    <br>
+    <div>Try to reach the bottom right!</div>
+  </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
